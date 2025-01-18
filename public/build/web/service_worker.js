@@ -13,7 +13,6 @@ self.addEventListener('install', (event) => {
         'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js',
         'https://cdn.cookie-script.com/s/f0df1134dafc0eb7acc54e9b6afc14aa.js',
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyAwWoDgbzcUN-6DcMuaaItJBfsU7WjNqnk&libraries=places'
     ];
 
     const otherScriptsForCache = [
