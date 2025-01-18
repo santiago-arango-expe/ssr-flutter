@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="es-CO"><head>
+  <!-- Google maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwWoDgbzcUN-6DcMuaaItJBfsU7WjNqnk&libraries=places"></script>
+      <!-- End Google maps -->
+  <!-- <title>La Recetta ~ El gusto de servir juntos</title> -->
+  
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--SEO-->
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 Day" />
+
+    <!--Theme-->
+    <meta name="msapplication-TileColor" content="#d21d39">
+    <meta name="theme-color" content="#d21d39">
+
+    <!-- iOS and WebApp Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="flutter-build" content="release-no-sourcemaps">
+    <meta name="apple-mobile-web-app-title" content="La Recetta ~ El gusto de servir juntos">
+
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="dist/styles/app.css">
+
+    <!-- Script for Cookies Scripts-->
+    <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/f0df1134dafc0eb7acc54e9b6afc14aa.js" async="" defer=""></script>
+
+    <!-- Recaptcha -->
+    <script defer="" src="https://www.google.com/recaptcha/api.js?render=6LcxqxwqAAAAANfa5b05ei38-UPYdAGgA5JBECXC"></script>
+    <!-- End recaptcha -->
+
+    <!-- Aws Continues Integration-->
+     <script src="https://client.rum.us-east-1.amazonaws.com/1.16.1/cwr.js" async defer=""></script>
+
+    <!-- Support webview -->
+    <script type="application/javascript" src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer=""></script>
+    <!--End Support webview -->
+
+    <script defer="">
+      // The value below is injected by flutter build, do not touch.
+      const serviceWorkerVersion = "1801209698";
+    </script>
+    <script async="" defer="">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service_worker.js');
+      }
+    </script>
+    <script src="flutter.js" defer=""></script>
+</head>
+  <body>
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <img src="https://images.ctfassets.net/oqtvq54l01dm/6ALnruonCe3hJSmqGsesJ5/078e356ddefc17812111df2301d14dfa/logo-la-recetta-red.webp" width="109" height="63" alt="La Recetta ~ El gusto de servir juntos">
+      <br/>
+      <span><strong>La Recetta</strong><br>
+        El gusto de servir juntos
+      </span>
+    </div>
+  </div>
+
+  <script defer="">
+    window.addEventListener("load", function (ev) {
+      var preloader = document.querySelector('.page-loading');
+      preloader.classList.remove('active');
+
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: async function (engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine({ renderer: 'html' });
+          await appRunner.runApp();
+        },
+      });
+    });
+  </script>
+
+    <!-- Support PDF -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js" async="" defer=""></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js" async="" defer=""></script>
+    
+    <script async="" defer="" type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof pdfjsLib !== 'undefined') {
+          pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
+        } else {
+          console.error("Error: pdfjsLib is not defined.");
+        }
+      });
+    </script>
+</body></html>

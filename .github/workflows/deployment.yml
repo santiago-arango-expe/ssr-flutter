@@ -7,32 +7,7 @@ on:
 permissions:
   contents: write 
 jobs:
-  test_nestjs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Run tests
-        run: npm run test
-      
-      - name: Build NestJS project
-        run: npm run build
-      
-      - name: Deploy NestJS
-        run: node dist/main
-
-
   test_flutter:
-    needs: test_nestjs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -52,7 +27,7 @@ jobs:
       - name: Run tests
         run: flutter test --coverage
       
-  build_and_deploy_flutter:
+  build_flutter:
     needs: test_flutter
     runs-on: ubuntu-latest
     steps:
@@ -74,8 +49,32 @@ jobs:
       
       - name: Build web
         run: flutter build web --release --output ./public/ssr_flutter --base-href /ssr-flutter/
+
+  nest_js:
+    needs: build_flutter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       
-      - name: Deploy Flutter web
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run tests
+        run: npm run test
+      
+      - name: Build NestJS project
+        run: npm run build
+      
+      - name: Deploy NestJS
+        run: node dist/main.js
+
+      - name: Deploy NestJs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.SSR_FLUTTER }}

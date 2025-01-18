@@ -1,0 +1,35 @@
+{
+  "name": "La Recetta ~ El gusto de servir juntos",
+  "short_name": "La Recetta ~ El gusto de servir juntos",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#d21d39",
+  "theme_color": "#d21d39",
+  "description": "Somos el aliado número uno del sector gastronómico en Colombia, comprometidos con cada cliente en la entrega de soluciones integrales para su negocio y el desarrollo del sector.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/Icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
