@@ -5,7 +5,7 @@ import { join } from 'path';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public/build/web'),
+      rootPath: join(__dirname, '..', 'public/ssr_flutter/build/web'),
       exclude: ['/api*'],
     }),
   ],
