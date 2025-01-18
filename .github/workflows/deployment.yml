@@ -1,95 +1,83 @@
-name: Deploy to GitHub Pages
-
+name: ssr_flutter_and_nestjs
 on:
   push:
-    branches: ["master"]
-
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 permissions:
-  contents: write
-
+  contents: write 
 jobs:
-  build_nestjs:
+  test_nestjs:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v4
       
-      # 2. Setup Node.js
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Cambia la versión según tu necesidad
-      
-      # 3. Install dependencies and build NestJS
+          node-version: '22'
+
       - name: Install dependencies
         run: npm install
       
-      - name: Build NestJS
+      - name: Run tests
+        run: npm run test
+      
+      - name: Build NestJS project
         run: npm run build
       
-      # 4. Copy built NestJS files to the public folder
-      - name: Copy NestJS to public folder
-        run: |
-          mkdir -p public/nestjs
-          cp -R dist/* public/nestjs/
+      - name: Deploy NestJS
+        run: node dist/main
 
-  build_flutter:
-    needs: build_nestjs
+
+  test_flutter:
+    needs: test_nestjs
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v4
       
-      # 2. Setup Flutter
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.16.5'
           channel: 'stable'
       
-      # 3. Enable Flutter web and install dependencies
+      - name: Install dependencies
+        run: flutter pub get
+      
+      - name: Analyze project source
+        run: flutter analyze
+      
+      - name: Run tests
+        run: flutter test --coverage
+      
+  build_and_deploy_flutter:
+    needs: test_flutter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SSR_FLUTTER }}  
+      
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.16.5'
+          channel: 'stable'
+      
       - name: Enable web
         run: flutter config --enable-web
       
       - name: Get dependencies
         run: flutter pub get
       
-      # 4. Build Flutter web project
-      - name: Build Flutter web
+      - name: Build web
         run: flutter build web --release --output ./public/ssr_flutter --base-href /ssr-flutter/
-
-  deploy_to_gh_pages:
-    needs: [build_nestjs, build_flutter]
-    runs-on: ubuntu-latest
-    steps:
-      # 1. Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v4
       
-      # 2. Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - name: Deploy Flutter web
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.SSR_FLUTTER }}
           publish_dir: ./public/ssr_flutter
           force_orphan: true
-
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v4
-  #     - name: Setup Pages
-  #       uses: actions/configure-pages@v5
-  #     - name: Upload artifact
-  #       uses: actions/upload-pages-artifact@v3
-  #       with:
-  #         path: '.'
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
-  #
