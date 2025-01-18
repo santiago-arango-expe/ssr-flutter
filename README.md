@@ -105,7 +105,7 @@ This guide provides steps to build and serve the Flutter web application locally
 ### 1. **Build the Application for Web**
 
 ```bash
-flutter build web --web-renderer html --no-source-maps --release
+flutter build web --web-renderer html --no-source-maps --release --base-href /ssr-flutter/
 ```
 
 ### 2. **Install `http-server` (If Not Already Installed)**
