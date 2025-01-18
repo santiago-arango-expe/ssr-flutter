@@ -45,7 +45,7 @@ jobs:
         run: flutter pub get
       
       - name: Build web
-        run: flutter build web --release --base-href /ssr-flutter/
+        run: flutter build web --release --output ./public/ssr_flutter --base-href /ssr-flutter/
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
