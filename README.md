@@ -1,99 +1,400 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<!--
+# ------------------------------------------------------------------------------------|
+#                     🚀 README By Santiago Arango Gutierrez 🚀                        #
+# ------------------------------------------------------------------------------------|
+# 🌐 **Website:** [www.https://santiagoarangog.github.io/cv-santiago-arango-g/.com](https://www.[text](https://santiagoarangog.github.io/cv-santiago-arango-g/).co)                                                  |
+# 📧 **Contact:** [santiago9606@gmail.com](mailto:santiago9606@gmail.com)             |
+# 💼 **Author:** Santiago Arango Gutierrez                                            |
+# 📅 **Date:** January 18, 2025                                                       |
+# 🔒 **Copyright:** 2025 Experimentality Labs S.A. All rights reserved                |
+# ------------------------------------------------------------------------------------|
+-->
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h3 align="center">SSR NEST JS and FLUTTER</h3>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<div align="center">
 
-## Description
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![Azure DevOps Pull Requests](https://img.shields.io/badge/Pull%20Requests-Open-blue)](https://github.com/santiagoarangog/ssr-flutter/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+</div>
 
-## Project setup
 
-```bash
-$ npm install
+## Table of Contents
+1. [Overview](#overview)
+2. [Requirements](#requirements)
+3. [Getting Started](#getting-started)
+4. [Running the Flutter Web Application Locally](#running-the-flutter-web-application-locally)
+   - [Build the Application for Web](#1-build-the-application-for-web)
+   - [Install `http-server`](#2-install-http-server-if-not-already-installed)
+   - [Serve the Build Directory Using `http-server`](#3-serve-the-build-directory-using-http-server)
+   - [Access the Application in Your Browser](#4-access-the-application-in-your-browser)
+5. [Splash Screen Setup](#splash-screen-setup)
+6. [Testing](#testing)
+7. [Test Coverage](#test-coverage)
+8. [Debugging Widgets](#debugging-widgets)
+9. [Versioning Guidelines](#versioning-guidelines)
+10. [Changelog for Version 1.3.0 - 2024-10-28](#changelog-for-version-130---2024-10-28)
+11. [Versioning Workflow](#versioning-workflow)
+12. [Contentful Backup and Migration Guide](#contentful-backup-and-migration-guide)
+13. [Credits](#credits)
+
+## Overview
+
+Welcome to the **FLUTTER B2B RECIPE PORTAL** project! This Flutter application serves as a B2B eCommerce platform for recipes.
+
+## Requirements
+
+- **Flutter Version:** 3.16.5
+- **Tools:** Dart SDK 3.2.3 • DevTools 2.28.4
+
+## Getting Started
+
+Follow these steps to run the project locally:
+
+1. **Clone the Repository:**
+```sh
+git clone https://GrupoNutresa@dev.azure.com/GrupoNutresa/La%20Recetta/_git/4494-portal-recetta-b2b-flutter
+cd 4494-portal-recetta-b2b-flutter
 ```
 
-## Compile and run the project
-
+2. **Install Dependencies:**
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+dart pub get
 ```
 
-## Run tests
-
+3. **Set up Environment Variables:**
+   - Use the `.env.template` file to create a `.env` file.
+   - After configuring the `.env` file, run:
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+dart run build_runner build --delete-conflicting-outputs
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
+4. **Internationalization:**
+   - Generate files for internationalization:
 ```bash
-$ npm install -g mau
-$ mau deploy
+dart run slang
+```
+   - Check the folder `lib/core/constants` for the generated files.
+
+   Example:
+```dart
+import 'package:portal_recetta_b2b_flutter/core/constants/generated/i18n/translations.g.dart';
+final Translations t = Translations.of(context);
+Text(t.title)
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+5. **Run the Application:**
+```bash
+flutter run
+```
 
-## Resources
+6. **Run with Specific Ports for Authentication Resources:**
+   - Run the following for optimal configuration:
+```bash
+flutter run -d <device> -t lib/main.dart --web-port <port_number>
+```
+   - Enabled Ports: `63390`, `63858`, `62969`, `64589`
 
-Check out a few resources that may come in handy when working with NestJS:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+## Running the Flutter Web Application Locally
 
-## Support
+This guide provides steps to build and serve the Flutter web application locally with `http-server`.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### 1. **Build the Application for Web**
 
-## Stay in touch
+```bash
+flutter build web --web-renderer html --no-source-maps --release
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### 2. **Install `http-server` (If Not Already Installed)**
 
-## License
+Install `http-server` globally with `npm`:
+```bash
+npm install -g http-server
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### 3. **Serve the Build Directory Using `http-server`**
+
+Change to `build/web` and start `http-server`:
+```bash
+cd build/web
+http-server -p 63390 -a localhost
+```
+
+### 4. **Access the Application in Your Browser**
+
+Open:
+```
+http://localhost:63390
+```
+
+## Splash Screen Setup
+
+Follow these steps to set up a splash screen using `flutter_native_splash`:
+
+1. **Install `flutter_native_splash`:**
+   ```yaml
+   dependencies:
+     flutter_native_splash: ^2.0.0
+   ```
+
+2. **Create Configuration File:**
+   Create `flutter_native_splash.yaml` in the root directory:
+   ```yaml
+   flutter_native_splash:
+     color: "#FFFFFF"
+     image: assets/gifs/loading.gif
+     android: true
+     ios: true
+     web: true
+     web_image_mode: center
+   ```
+
+3. **Generate Splash Screen:**
+```bash
+dart run flutter_native_splash:create --path=flutter_native_splash.yaml
+```
+
+## Testing
+
+Run widget tests:
+```bash
+flutter test
+```
+
+## Test Coverage
+
+To assess test coverage:
+
+1. **Install LCOV:**
+```bash
+brew install lcov
+```
+
+2. **Generate Coverage Data:**
+```bash
+flutter test --coverage
+```
+
+3. **Generate HTML Reports:**
+```bash
+genhtml coverage/lcov.info -o coverage/html
+```
+
+4. **View Coverage Reports:**
+```bash
+open coverage/html/index.html
+```
+
+## Debugging Widgets
+
+To effectively debug Flutter widgets:
+
+1. **Run in Debug Mode:**
+```bash
+flutter run
+```
+
+2. **Inspect Widgets:**
+```bash
+flutter pub global run devtools
+```
+
+3. **Hot Reload:**
+   Press `R` in the terminal to reload changes.
+
+4. **Print Statements and Breakpoints:**
+   Use `print` statements and breakpoints for debugging.
+
+## Versioning Guidelines
+
+This application uses **Semantic Versioning** (MAJOR.MINOR.PATCH):
+- **MAJOR**: Breaking changes
+- **MINOR**: New, backward-compatible features
+- **PATCH**: Backward-compatible bug fixes
+
+## Changelog example for Version X.X.X - XXXX-XX-XX
+
+### Improvements
+- Fixed multiple bugs for enhanced stability.
+
+### New Features
+- New feature
+- Refactor feature and major changed
+
+### Interface & UX Updates
+- Resolved UI/UX bugs for a smoother experience.
+
+## Versioning Workflow
+
+1. **Branching Strategy:**
+   - **Main**: Latest stable release.
+   - **Development**: Ongoing feature integration.
+
+2. **Releases:**
+   - **Pre-releases** (e.g., `X.X.X-beta`) for internal testing.
+   - **Hotfixes** (e.g., `X.X.X`) for urgent production bugs.
+
+3. **Tagging and Documentation:**
+   - Each release is tagged and documented in the changelog.
+
+## Contentful Backup and Migration Guide
+
+This guide explains how to:
+1. Generate a backup of a Contentful environment.
+2. Migrate data from `dev` to `qa`.
+3. Migrate data from `qa` to `master`.
+4. Handle model deletion during migration.
+
+## Prerequisites
+
+1. Install the Contentful CLI:
+   ```bash
+   npm install -g contentful-cli
+   ```
+2. Authenticate with your Contentful account:
+   ```bash
+   contentful login
+   ```
+3. Replace placeholders like `<SPACE_ID>` with your actual values.
+4. Ensure you have appropriate permissions for the environments.
+
+## Step 1: Generate a Backup of an Environment
+
+To back up a specific environment:
+
+```bash
+contentful space export \
+  --space-id <SPACE_ID> \
+  --environment-id <ENVIRONMENT_ID> \
+  --content-file backup-<ENVIRONMENT_ID>.json \
+  --download-assets
+```
+
+### Example:
+Export data from the `qa` environment:
+```bash
+contentful space export \
+  --space-id oqtvq54l01dm \
+  --environment-id qa \
+  --content-file backup-qa.json \
+  --download-assets
+```
+
+- **`--content-file`**: Specifies the name of the exported file.
+- **`--download-assets`**: Ensures all associated assets are downloaded.
+
+## Step 2: Migrate Data from `dev` to `qa`
+
+### 1. Export Data from `dev`
+```bash
+contentful space export \
+  --space-id <SPACE_ID> \
+  --environment-id dev \
+  --content-file dev-data.json \
+  --download-assets
+```
+
+### 2. Import Data into `qa`
+```bash
+contentful space import \
+  --space-id <SPACE_ID> \
+  --environment-id qa \
+  --content-file dev-data.json \
+  --retry-limit 10 \
+  --rate-limit 5
+```
+
+- **`--retry-limit`**: Specifies the maximum number of retries for rate limit errors.
+- **`--rate-limit`**: Controls the number of requests per second (default: 5).
+
+## Step 3: Migrate Data from `qa` to `master`
+
+### 1. Export Data from `qa`
+```bash
+contentful space export \
+  --space-id <SPACE_ID> \
+  --environment-id qa \
+  --content-file qa-data.json \
+  --download-assets
+```
+
+### 2. Import Data into `master`
+```bash
+contentful space import \
+  --space-id <SPACE_ID> \
+  --environment-id master \
+  --content-file qa-data.json \
+  --retry-limit 10 \
+  --rate-limit 5
+```
+
+## Step 4: Handle Model Deletion During Migration
+
+When migrating data between environments, the `export` and `import` commands do not automatically delete content types (models) in the target environment. Follow these steps to ensure unwanted models are removed:
+
+### 1. Identify Models to Delete
+- Review the models in the target environment that should no longer exist.
+- Compare them against the source environment to identify obsolete models.
+
+### 2. Delete Models Manually
+- Go to the Contentful web interface.
+- Navigate to the *Content Types* section in the target environment.
+- Delete the unwanted models manually.
+
+### 3. Delete Models via CLI (Optional)
+Use the following command to delete a model programmatically:
+```bash
+contentful space delete-content-type \
+  --space-id <SPACE_ID> \
+  --environment-id <ENVIRONMENT_ID> \
+  --id <CONTENT_TYPE_ID>
+```
+
+### 4. Export and Import Data
+After cleaning up the target environment, proceed with the `export` and `import` steps as outlined above.
+
+## Additional Tips
+
+1. **Verify Imported Data:** After importing, ensure all entries and assets are correctly migrated:
+   ```bash
+   contentful entry list --space-id <SPACE_ID> --environment-id <ENVIRONMENT_ID>
+   contentful asset list --space-id <SPACE_ID> --environment-id <ENVIRONMENT_ID>
+   ```
+
+2. **Handle Large Datasets:** If you encounter rate limit issues:
+   - Increase the `--retry-limit`.
+   - Reduce the `--rate-limit`.
+
+3. **Split Large Files:** If the exported JSON file is too large, consider splitting it into smaller parts using tools like `jq`.
+
+4. **Monitor API Limits:** Contentful enforces [rate limits](https://www.contentful.com/developers/docs/references/content-management-api/#/reference/rate-limits).
+
+## Troubleshooting
+
+### Rate Limit Errors:
+If you see the error:
+```
+⚠ Rate limit error occurred. Waiting for <time> ms before retrying...
+```
+- Increase the retry limit using `--retry-limit`.
+- Reduce the request rate using `--rate-limit`.
+
+### API Errors:
+Check the error logs and ensure the data being imported doesn’t conflict with existing entries or assets in the target environment.
+
+---
+
+This document should help streamline the process of backing up and migrating environments in Contentful. For further assistance, refer to the [Contentful CLI Documentation](https://www.contentful.com/developers/docs/tutorials/cli/).
+
+## Credits
+
+Developed and maintained by:  
+**Santiago Arango Gutierrez**  
+Email: santiago.arango@experimentality.co  
+
+All rights reserved © Experimentality Labs
+
+---
