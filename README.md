@@ -48,7 +48,7 @@ Follow these steps to run the project locally:
 1. **Clone the Repository:**
 
 ```sh
-git clone https://github.com/santiagoarangog/ssr-flutter.git
+git clone [https://github.com/santiagoarangog/ssr-flutter.git](https://github.com/santiago-arango-expe/ssr-flutter)
 cd ssr-flutter
 ```
 
